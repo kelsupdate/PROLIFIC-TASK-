@@ -2,185 +2,247 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PROLIFIC TASK – Surveys, app testing and online tasks</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PROLIFIC TASK – Surveys, app testing and online tasks that pay</title>
 <meta name="description" content="Explore surveys, AI training activities and online task opportunities with PROLIFIC TASK.">
-<meta name="theme-color" content="#5b21b6">
+<meta name="theme-color" content="#2a1066">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#161a2b;--muted:#5f6679;--brand:#6d28d9;--brand-dark:#5b21b6;--tint:#f5f2fc;--gold:#f6bd2e;--line:#e6e3ef;--bg:#fff;--card:#fff}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#eceaf5;--muted:#a6a3b8;--brand:#a78bfa;--brand-dark:#8b5cf6;--tint:#1a1830;--line:#2c2a45;--bg:#12111f;--card:#1a1830}}
-:root[data-theme="dark"]{--ink:#eceaf5;--muted:#a6a3b8;--brand:#a78bfa;--brand-dark:#8b5cf6;--tint:#1a1830;--line:#2c2a45;--bg:#12111f;--card:#1a1830}
+:root{--ink:#17122e;--muted:#625d78;--deep:#2a1066;--purple:#6d28d9;--violet:#8b5cf6;--gold:#f6bd2e;--lav:#f5f1ff;--line:#e8e2f6}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:80px}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{margin:0;font-family:Manrope,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--brand);outline-offset:3px;border-radius:6px}
-.container{max-width:1080px;margin:0 auto;padding:0 1.25rem}
-svg.i{width:1.25em;height:1.25em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:8px}
+.c{max-width:1120px;margin:0 auto;padding:0 1.5rem}
+svg.i{width:1.2em;height:1.2em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;padding:.95rem 1.6rem;border-radius:999px;font-weight:700;font-size:.98rem;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.gold{background:var(--gold);color:#2a1a00;box-shadow:0 10px 24px rgba(246,189,46,.35)}
+.ghost{border:1.5px solid rgba(255,255,255,.35);color:#fff}
+.ghost:hover{background:rgba(255,255,255,.1)}
+.pur{background:var(--purple);color:#fff;box-shadow:0 10px 24px rgba(109,40,217,.3)}
 
-/* header */
-header{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
-.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-weight:800;font-size:1.15rem;letter-spacing:-.02em}
-.brand svg{width:34px;height:34px}
-.nav-links{display:flex;align-items:center;gap:1.75rem}
-.nav-links a{text-decoration:none;font-size:.93rem;font-weight:500;color:var(--muted)}
-.nav-links a:hover{color:var(--brand)}
-.nav-links .btn{color:#fff}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.8rem 1.4rem;border-radius:10px;font-weight:600;font-size:.95rem;text-decoration:none;border:1px solid transparent;transition:background .2s}
-.btn-primary{background:var(--brand);color:#fff}
-.btn-primary:hover{background:var(--brand-dark)}
-.btn-outline{border-color:var(--line);background:var(--card);color:var(--ink)}
-.btn-outline:hover{border-color:var(--brand)}
-.btn-sm{padding:.55rem 1.1rem;font-size:.88rem}
+/* header + hero */
+.top{background:radial-gradient(1000px 520px at 85% 10%,#6d3bd6 0%,transparent 60%),linear-gradient(160deg,#2a1066,#1b0a45 70%);color:#fff;position:relative;overflow:hidden;padding-bottom:7rem}
+.top::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.12) 1.2px,transparent 1.3px);background-size:26px 26px;mask-image:linear-gradient(180deg,#000,transparent 70%);-webkit-mask-image:linear-gradient(180deg,#000,transparent 70%);pointer-events:none}
+.top>*{position:relative;z-index:1}
+.nav{display:flex;align-items:center;justify-content:space-between;height:84px;padding-top:env(safe-area-inset-top,0)}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-weight:800;font-size:1.2rem;letter-spacing:-.02em}
+.brand svg{width:38px;height:38px;background:#fff;border-radius:11px;padding:4px}
+.links{display:flex;align-items:center;gap:2rem}
+.links a{text-decoration:none;font-weight:600;font-size:.93rem;color:rgba(255,255,255,.8)}
+.links a:hover{color:#fff}
+.links .btn{padding:.65rem 1.3rem;font-size:.9rem;color:#2a1a00}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:2rem;align-items:center;padding-top:2.5rem}
+h1{font-size:clamp(2.5rem,5.6vw,4.2rem);line-height:1.04;letter-spacing:-.045em;margin:0 0 1.25rem;font-weight:800}
+.lead{font-size:1.15rem;color:rgba(255,255,255,.78);max-width:31rem;margin:0 0 2rem}
+.acts{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:1.75rem}
+.proof{display:flex;align-items:center;gap:.8rem;font-size:.9rem;color:rgba(255,255,255,.75)}
+.proof b{color:#fff}
+.stars{color:var(--gold);letter-spacing:2px}
+.stage{position:relative;display:flex;justify-content:center;min-height:540px}
+.phone{width:262px;height:530px;border-radius:44px;background:#0d0820;padding:10px;box-shadow:0 40px 80px rgba(0,0,0,.45),0 0 0 2px rgba(255,255,255,.08);transform:rotate(4deg)}
+.screen{height:100%;border-radius:35px;background:#faf8ff;overflow:hidden;color:var(--ink)}
+.s-top{background:linear-gradient(160deg,#7c3aed,#4c1d95);color:#fff;padding:2.7rem 1.1rem 1.3rem}
+.s-top small{font-size:.7rem;opacity:.85}
+.s-top b{display:block;font-size:1.9rem;letter-spacing:-.03em;line-height:1.2}
+.s-top span{display:inline-block;margin-top:.4rem;padding:.2rem .6rem;border-radius:99px;background:rgba(255,255,255,.18);font-size:.68rem;font-weight:700}
+.s-list{padding:.9rem;display:grid;gap:.6rem}
+.row{display:flex;align-items:center;gap:.65rem;background:#fff;border:1px solid var(--line);border-radius:14px;padding:.65rem .75rem}
+.ic{width:34px;height:34px;border-radius:10px;background:var(--lav);color:var(--purple);display:flex;align-items:center;justify-content:center}
+.row div{flex:1;font-size:.74rem;font-weight:800;line-height:1.3}
+.row em{display:block;font-style:normal;font-weight:600;color:var(--muted);font-size:.68rem}
+.row u{text-decoration:none;font-weight:800;font-size:.75rem;color:#0d8a4f}
+.float{position:absolute;background:#fff;color:var(--ink);border-radius:16px;padding:.7rem .95rem;display:flex;align-items:center;gap:.65rem;font-size:.78rem;font-weight:700;box-shadow:0 20px 40px rgba(0,0,0,.28);line-height:1.3}
+.float small{display:block;font-weight:500;color:var(--muted);font-size:.7rem}
+.float .ic{background:#e7f8ef;color:#0d8a4f}
+.f1{top:80px;left:-10px}.f2{bottom:90px;right:-14px}
+.f2 .ic{background:#fff4d6;color:#b07d00}
 
-/* hero */
-.hero{background:linear-gradient(180deg,var(--tint),var(--bg));padding:4.5rem 0 3.5rem}
-.hero .container{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
-h1{font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.1;letter-spacing:-.035em;margin:0 0 1rem;font-weight:800}
-.lead{font-size:1.1rem;color:var(--muted);max-width:30rem;margin:0 0 1.75rem}
-.hero-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:1.5rem}
-.hero-points{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;margin:0;padding:0;list-style:none;font-size:.9rem;color:var(--muted)}
-.hero-points li{display:flex;align-items:center;gap:.4rem}
-.hero-points svg{color:var(--brand)}
-.phone-wrap{display:flex;justify-content:center}
-.phone{width:250px;height:500px;border-radius:40px;background:#1c1533;padding:10px;box-shadow:0 30px 60px rgba(60,20,120,.25)}
-.screen{height:100%;border-radius:31px;background:#faf8ff;overflow:hidden;display:flex;flex-direction:column;color:#161a2b}
-.screen-top{background:linear-gradient(160deg,#6d28d9,#4c1d95);color:#fff;padding:2.6rem 1rem 1.1rem;text-align:center}
-.screen-top small{font-size:.7rem;opacity:.85}
-.screen-top b{display:block;font-size:1.7rem;letter-spacing:-.03em}
-.screen-list{padding:.8rem;display:flex;flex-direction:column;gap:.55rem}
-.row{display:flex;align-items:center;gap:.6rem;background:#fff;border:1px solid #e9e2f4;border-radius:12px;padding:.6rem .7rem}
-.row .ic{width:30px;height:30px;border-radius:8px;background:#f3edff;color:#6d28d9;display:flex;align-items:center;justify-content:center}
-.row .ic svg{width:16px;height:16px}
-.row div{flex:1;font-size:.72rem;font-weight:700}
-.row span{display:block;font-weight:600;color:#7a6a00;font-size:.68rem}
+/* stats */
+.stats{position:relative;z-index:2;margin-top:-3.5rem;background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:0 24px 60px rgba(42,16,102,.14);display:grid;grid-template-columns:repeat(4,1fr);padding:1.75rem 1rem;text-align:center}
+.stats div+div{border-left:1px solid var(--line)}
+.stats b{display:block;font-size:2rem;letter-spacing:-.04em;color:var(--purple);line-height:1.2}
+.stats span{font-size:.85rem;color:var(--muted);font-weight:600}
 
 /* sections */
-section{padding:4.5rem 0}
-.alt{background:var(--tint)}
-.head{text-align:center;max-width:36rem;margin:0 auto 2.75rem}
-h2{font-size:clamp(1.7rem,3.5vw,2.25rem);letter-spacing:-.025em;line-height:1.2;margin:0 0 .6rem;font-weight:800}
-.head p{margin:0;color:var(--muted)}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;text-align:center;padding:2rem 0;border-bottom:1px solid var(--line)}
-.stats b{display:block;font-size:1.8rem;letter-spacing:-.03em;color:var(--brand)}
-.stats span{font-size:.85rem;color:var(--muted)}
+section{padding:5.5rem 0}
+.alt{background:var(--lav)}
+.head{text-align:center;max-width:38rem;margin:0 auto 3rem}
+h2{font-size:clamp(1.9rem,3.8vw,2.7rem);line-height:1.12;letter-spacing:-.04em;margin:0 0 .8rem;font-weight:800}
+.head p,.copy p{color:var(--muted);margin:0;font-size:1.05rem}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.split.rev .copy{order:2}
+.ticks{list-style:none;padding:0;margin:1.5rem 0 2rem;display:grid;gap:.75rem}
+.ticks li{display:flex;gap:.7rem;font-weight:600}
+.ticks svg{color:#fff;background:var(--purple);border-radius:50%;padding:3px;width:1.4em;height:1.4em;margin-top:.1rem}
+.panel{background:linear-gradient(145deg,#efe8ff,#e1d6fb);border-radius:32px;padding:2.5rem 2rem;display:grid;gap:.8rem}
+.panel .row{box-shadow:0 8px 20px rgba(42,16,102,.08);padding:.9rem 1rem}
+.panel .row div{font-size:.88rem}
+.panel .row em{font-size:.78rem}
+.bal{background:linear-gradient(160deg,#7c3aed,#2a1066);color:#fff;border-radius:22px;padding:1.5rem}
+.bal small{opacity:.8;font-size:.8rem}
+.bal b{display:block;font-size:2.4rem;letter-spacing:-.04em;line-height:1.2}
+.bar{height:8px;border-radius:9px;background:rgba(255,255,255,.2);margin:1rem 0 .4rem;overflow:hidden}
+.bar i{display:block;width:82%;height:100%;background:var(--gold);border-radius:9px}
+.bal span{font-size:.78rem;opacity:.85}
 .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:1.6rem;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(42,16,102,.1)}
+.tile{width:52px;height:52px;border-radius:16px;display:flex;align-items:center;justify-content:center;color:#fff;margin-bottom:1.1rem;background:linear-gradient(145deg,#8b5cf6,#5b21b6)}
+.card:nth-child(2) .tile{background:linear-gradient(145deg,#fbbf24,#e09a00)}
+.card:nth-child(3) .tile{background:linear-gradient(145deg,#60a5fa,#3b6fd6)}
+.card:nth-child(4) .tile{background:linear-gradient(145deg,#34d399,#0f9f6e)}
+.tile svg{width:26px;height:26px}
+.card h3{margin:0 0 .4rem;font-size:1.1rem}
+.card p{margin:0;color:var(--muted);font-size:.92rem}
+.pay{display:inline-block;margin-top:1rem;padding:.3rem .8rem;border-radius:99px;background:var(--lav);color:var(--purple);font-weight:800;font-size:.8rem}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;counter-reset:s;list-style:none;padding:0;margin:0}
+.steps li{counter-increment:s;background:#fff;border-radius:24px;padding:2rem;border:1px solid var(--line)}
+.steps li::before{content:counter(s);display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:var(--purple);color:#fff;font-weight:800;margin-bottom:1.2rem}
+.steps h3{margin:0 0 .4rem}.steps p{margin:0;color:var(--muted);font-size:.95rem}
+.methods{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem}
+.methods span{display:flex;align-items:center;gap:.55rem;padding:.85rem 1.3rem;background:#fff;border:1px solid var(--line);border-radius:16px;font-weight:700;box-shadow:0 6px 16px rgba(42,16,102,.05)}
+.methods svg{color:var(--purple)}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.5rem}
-.card .ic{width:44px;height:44px;border-radius:12px;background:var(--tint);color:var(--brand);display:flex;align-items:center;justify-content:center;margin-bottom:1rem}
-.alt .card .ic{background:var(--bg)}
-.card h3{margin:0 0 .35rem;font-size:1.05rem}
-.card p{margin:0;font-size:.92rem;color:var(--muted)}
-.pay{display:inline-block;margin-top:.8rem;font-size:.8rem;font-weight:700;color:var(--brand)}
-.steps{counter-reset:s;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin:0;padding:0;list-style:none}
-.steps li{counter-increment:s;text-align:center}
-.steps li::before{content:counter(s);display:flex;align-items:center;justify-content:center;width:48px;height:48px;margin:0 auto 1rem;border-radius:50%;background:var(--brand);color:#fff;font-weight:700}
-.steps h3{margin:0 0 .3rem}
-.steps p{margin:0;color:var(--muted);font-size:.93rem}
-.methods{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem}
-.methods span{display:flex;align-items:center;gap:.5rem;padding:.7rem 1.1rem;background:var(--card);border:1px solid var(--line);border-radius:10px;font-weight:600;font-size:.92rem}
-.methods svg{color:var(--brand)}
-.quote p{margin:0 0 1.1rem;font-size:.95rem}
-.who{display:flex;align-items:center;gap:.7rem;font-size:.88rem}
-.who i{width:38px;height:38px;border-radius:50%;background:var(--tint);color:var(--brand);display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:700}
-.who small{display:block;color:var(--muted)}
-.stars{color:var(--gold);letter-spacing:2px;margin-bottom:.5rem}
-.referral{background:var(--brand-dark);color:#fff;border-radius:18px;padding:2.5rem 1.5rem;text-align:center}
-.referral h2{color:#fff}
-.referral p{max-width:30rem;margin:0 auto 1.25rem;opacity:.9}
-.referral .btn{background:#fff;color:#4c1d95}
-.faq{max-width:700px;margin:0 auto}
-details{border-bottom:1px solid var(--line);padding:1.1rem 0}
-summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+.quote{display:flex;flex-direction:column;gap:1rem}
+.quote p{margin:0;color:var(--ink);font-size:1rem;font-weight:500}
+.who{display:flex;align-items:center;gap:.75rem;font-weight:700;font-size:.92rem;margin-top:auto}
+.who i{width:42px;height:42px;border-radius:50%;background:linear-gradient(145deg,#8b5cf6,#5b21b6);color:#fff;display:flex;align-items:center;justify-content:center;font-style:normal}
+.who small{display:block;font-weight:500;color:var(--muted)}
+.ref{background:linear-gradient(120deg,var(--gold),#ffd76a);border-radius:32px;padding:3rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.ref h2{margin:0 0 .4rem;font-size:clamp(1.6rem,3vw,2.2rem)}
+.ref p{margin:0;color:#4a3600;font-weight:500;max-width:34rem}
+.faq{max-width:740px;margin:0 auto}
+details{background:#fff;border:1px solid var(--line);border-radius:18px;padding:1.2rem 1.4rem;margin-bottom:.8rem}
+summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:1rem}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";color:var(--brand);font-size:1.3rem;line-height:1}
-details[open] summary::after{content:"–"}
-details p{margin:.7rem 0 0;color:var(--muted);font-size:.94rem}
-.cta{text-align:center}
-.stores{display:flex;justify-content:center;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem}
-.store{display:flex;align-items:center;gap:.6rem;padding:.65rem 1.2rem;border-radius:10px;background:#161a2b;color:#fff;text-decoration:none;text-align:left}
-.store small{display:block;font-size:.65rem;opacity:.75;line-height:1.1}
-.store b{font-size:.95rem;line-height:1.2}
+summary::after{content:"+";color:var(--purple);font-size:1.4rem;line-height:1;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:.8rem 0 0;color:var(--muted);font-size:.95rem}
+.final{background:linear-gradient(160deg,#2a1066,#1b0a45);color:#fff;text-align:center;border-radius:36px;padding:4rem 1.5rem;margin:0 1.5rem}
+.final h2{color:#fff}
+.final p{color:rgba(255,255,255,.78);margin:0 auto;max-width:30rem}
+.stores{display:flex;justify-content:center;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.store{display:flex;align-items:center;gap:.7rem;padding:.7rem 1.4rem;border-radius:14px;background:#fff;color:var(--ink);text-decoration:none;text-align:left}
+.store small{display:block;font-size:.65rem;color:var(--muted);line-height:1.1;font-weight:600}
+.store b{font-size:1rem;line-height:1.2}
 .store.off{opacity:.55;pointer-events:none}
-footer{border-top:1px solid var(--line);padding:2.5rem 0;font-size:.88rem;color:var(--muted)}
-footer .container{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
+footer{padding:3rem 0 2rem;color:var(--muted);font-size:.9rem}
+.fgrid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2rem;padding-bottom:2rem;border-bottom:1px solid var(--line)}
+.fgrid a{display:block;text-decoration:none;margin-top:.4rem}.fgrid a:hover{color:var(--purple)}
+.fgrid b{color:var(--ink)}
+.copy-r{padding-top:1.5rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem}
 
-@media(max-width:860px){
-  .hero .container{grid-template-columns:1fr;text-align:center}
-  .lead{margin-left:auto;margin-right:auto}
-  .hero-actions,.hero-points{justify-content:center}
-  .grid4{grid-template-columns:repeat(2,1fr)}
-  .grid3,.steps{grid-template-columns:1fr}
-  .stats{grid-template-columns:repeat(2,1fr)}
-  .nav-links a:not(.btn){display:none}
+@media(max-width:900px){
+  .hero,.split{grid-template-columns:1fr}
+  .split.rev .copy{order:0}
+  .hero{text-align:center}.lead{margin-left:auto;margin-right:auto}.acts,.proof{justify-content:center}
+  .stage{min-height:520px}
+  .grid4{grid-template-columns:repeat(2,1fr)}.grid3,.steps{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr);row-gap:1.5rem}.stats div:nth-child(3){border-left:none}
+  .links a:not(.btn){display:none}
+  section{padding:4rem 0}
 }
-@media(max-width:420px){.grid4{grid-template-columns:1fr}}
+@media(max-width:480px){.grid4{grid-template-columns:1fr}.f1{left:0}.f2{right:0}.final{margin:0 .75rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* ===== marketing upgrade: rich gradients, no flat fills ===== */
+:root{--pink:#ec4899;--cyan:#22d3ee;--orange:#fb923c}
+body{background:linear-gradient(180deg,#fff 0%,#faf5ff 35%,#fff7f0 70%,#f6f0ff 100%)}
+.top{background:radial-gradient(900px 500px at 88% 5%,rgba(139,92,246,.9) 0%,transparent 60%),radial-gradient(700px 500px at 5% 95%,rgba(236,72,153,.55) 0%,transparent 60%),radial-gradient(500px 400px at 60% 100%,rgba(34,211,238,.28) 0%,transparent 70%),linear-gradient(160deg,#2a1066,#1b0a45 70%)}
+.top>.blob{position:absolute;z-index:0;border-radius:50%;filter:blur(70px);pointer-events:none}
+.b1{width:340px;height:340px;background:var(--orange);opacity:.28;right:-80px;top:120px}
+.b2{width:280px;height:280px;background:var(--cyan);opacity:.2;left:38%;top:-120px}
+.stage::before{content:"";position:absolute;inset:8% 4%;border-radius:50%;background:radial-gradient(circle,rgba(246,189,46,.45),rgba(236,72,153,.3) 45%,transparent 70%);filter:blur(30px)}
+.stage>*{position:relative}.stage>.float{position:absolute}
+.float{background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.6)}
+.gold{background:linear-gradient(90deg,#fde047,#fb923c)}
+.pur{background:linear-gradient(90deg,#6d28d9,#c026d3)}
+.stats{background:linear-gradient(#fff,#fff) padding-box,linear-gradient(120deg,#a78bfa,#f472b6,#fcd34d) border-box;border:2px solid transparent}
+.stats b,.head h2,.copy h2{background:linear-gradient(90deg,#2a1066,#6d28d9 55%,#db2777);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.stats b{background:linear-gradient(90deg,#6d28d9,#ec4899)}
+.ribbon{margin:4.5rem 0 0;background:linear-gradient(90deg,#6d28d9,#c026d3,#ec4899,#f59e0b);color:#fff;transform:rotate(-1.4deg);overflow:hidden;white-space:nowrap;box-shadow:0 16px 40px rgba(192,38,211,.28)}
+.ribbon div{display:inline-flex;gap:2.5rem;padding:1rem 0;animation:slide 28s linear infinite;font-weight:800;font-size:1.05rem}
+.ribbon span::after{content:"✦";margin-left:2.5rem;color:#fde68a}
+@keyframes slide{to{transform:translateX(-50%)}}
+section{position:relative;overflow:hidden}
+section>.c{position:relative;z-index:1}
+section::before{content:"";position:absolute;width:460px;height:460px;border-radius:50%;right:-160px;top:-100px;background:radial-gradient(circle,rgba(236,72,153,.16),transparent 70%);pointer-events:none}
+section::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;left:-160px;bottom:-120px;background:radial-gradient(circle,rgba(34,211,238,.16),transparent 70%);pointer-events:none}
+.alt{background:radial-gradient(700px 320px at 0% 0%,rgba(139,92,246,.26),transparent 70%),radial-gradient(700px 340px at 100% 100%,rgba(251,146,60,.22),transparent 70%),linear-gradient(135deg,#efe6ff,#fde8fb 55%,#ffefd6)}
+.card,.steps li,details,.methods span{background:linear-gradient(160deg,#fff,#f8f3ff) padding-box,linear-gradient(135deg,#c4b5fd,#f9a8d4,#fcd34d) border-box;border:1.5px solid transparent}
+.grid3 .card.quote:nth-child(2){background:linear-gradient(160deg,#fff,#fff1f8) padding-box,linear-gradient(135deg,#f9a8d4,#fcd34d) border-box}
+.grid3 .card.quote:nth-child(3){background:linear-gradient(160deg,#fff,#effbff) padding-box,linear-gradient(135deg,#67e8f9,#c4b5fd) border-box}
+.steps li::before{background:linear-gradient(145deg,#8b5cf6,#db2777);box-shadow:0 8px 20px rgba(139,92,246,.35)}
+.ticks svg{background:linear-gradient(145deg,#8b5cf6,#db2777)}
+.pay{background:linear-gradient(90deg,#ede4ff,#fde4f3);color:#7a1fb5}
+.panel{background:radial-gradient(300px 200px at 90% 0%,rgba(253,224,71,.6),transparent 70%),radial-gradient(300px 220px at 0% 100%,rgba(244,114,182,.45),transparent 70%),linear-gradient(145deg,#c4b5fd,#e9b8fb);box-shadow:0 30px 60px rgba(139,92,246,.28)}
+.bal{background:radial-gradient(260px 180px at 100% 0%,rgba(236,72,153,.6),transparent 70%),linear-gradient(160deg,#7c3aed,#2a1066)}
+.bar i{background:linear-gradient(90deg,#fde047,#fb923c)}
+.ref{background:radial-gradient(400px 260px at 100% 0%,rgba(253,224,71,.55),transparent 70%),linear-gradient(120deg,#8b5cf6,#db2777 60%,#f59e0b);color:#fff;box-shadow:0 30px 60px rgba(219,39,119,.28)}
+.ref h2{background:none;-webkit-text-fill-color:#fff;color:#fff}.ref p{color:rgba(255,255,255,.92)}
+.ref .btn{background:#fff;color:#4c1d95;box-shadow:0 10px 24px rgba(0,0,0,.2)}
+.final{position:relative;overflow:hidden;background:radial-gradient(500px 320px at 100% 0%,rgba(236,72,153,.6),transparent 70%),radial-gradient(500px 320px at 0% 100%,rgba(34,211,238,.35),transparent 70%),radial-gradient(400px 260px at 50% 50%,rgba(139,92,246,.5),transparent 70%),linear-gradient(160deg,#2a1066,#1b0a45)}
+.final h2{background:none;-webkit-text-fill-color:#fff;color:#fff}
+footer{background:linear-gradient(180deg,transparent,#efe6ff);margin-top:4rem}
+@media(prefers-reduced-motion:reduce){.ribbon div{animation:none}}
 </style>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="logo" viewBox="0 0 100 100" fill="none"><rect x="15" y="12" width="70" height="76" rx="17" stroke="#6d28d9" stroke-width="7"/><rect x="25" y="29" width="17" height="17" rx="4" fill="#f6bd2e"/><path d="M29 37l5 5 6-9" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M52 37h21" stroke="#6d28d9" stroke-width="6" stroke-linecap="round"/><rect x="25" y="55" width="17" height="17" rx="4" fill="#f6bd2e"/><path d="M29 63l5 5 6-9" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M52 63h21" stroke="#6d28d9" stroke-width="6" stroke-linecap="round"/></symbol>
-  <symbol id="check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></symbol>
-  <symbol id="list" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></symbol>
-  <symbol id="phone" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></symbol>
-  <symbol id="image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></symbol>
-  <symbol id="star" viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.2 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z"/></symbol>
-  <symbol id="wallet" viewBox="0 0 24 24"><path d="M3 7a2 2 0 012-2h13v4"/><path d="M3 7v11a2 2 0 002 2h14a1 1 0 001-1V9a1 1 0 00-1-1H5a2 2 0 01-2-1z"/><circle cx="16" cy="14" r="1"/></symbol>
-  <symbol id="globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></symbol>
-  <symbol id="bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
-  <symbol id="shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
-  <symbol id="play" viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z" fill="currentColor"/></symbol>
+<symbol id="logo" viewBox="0 0 100 100" fill="none"><rect x="15" y="12" width="70" height="76" rx="17" stroke="#6d28d9" stroke-width="7"/><rect x="25" y="29" width="17" height="17" rx="4" fill="#f6bd2e"/><path d="M29 37l5 5 6-9" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M52 37h21" stroke="#6d28d9" stroke-width="6" stroke-linecap="round"/><rect x="25" y="55" width="17" height="17" rx="4" fill="#f6bd2e"/><path d="M29 63l5 5 6-9" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M52 63h21" stroke="#6d28d9" stroke-width="6" stroke-linecap="round"/></symbol>
+<symbol id="check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></symbol>
+<symbol id="list" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></symbol>
+<symbol id="phone" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></symbol>
+<symbol id="image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></symbol>
+<symbol id="star" viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.2 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z"/></symbol>
+<symbol id="wallet" viewBox="0 0 24 24"><path d="M3 7a2 2 0 012-2h13v4"/><path d="M3 7v11a2 2 0 002 2h14a1 1 0 001-1V9a1 1 0 00-1-1H5a2 2 0 01-2-1z"/><circle cx="16" cy="14" r="1"/></symbol>
+<symbol id="play" viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z" fill="currentColor" stroke="none"/></symbol>
+<symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
 </svg>
 
-<header>
-  <div class="container nav">
-    <a class="brand" href="#top" aria-label="PROLIFIC TASK home"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#logo"/></svg>PROLIFIC TASK</a>
-    <nav class="nav-links" aria-label="Main">
-      <a href="#features">Features</a>
-      <a href="#how">How it works</a>
-      <a href="#payouts">Payouts</a>
-      <a href="#faq">FAQ</a>
-      <a class="btn btn-primary btn-sm" href="https://play.google.com/store/apps/details?id=com.remotask.app">Get the app</a>
-    </nav>
-  </div>
-</header>
-
-<main id="top">
-<div class="hero">
-  <div class="container">
-    <div>
-      <h1>Simple online tasks, paid straight to your phone</h1>
-      <p class="lead">Explore surveys, AI training activities and online task opportunities with PROLIFIC TASK. Free to join and open worldwide.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.remotask.app">Create free account</a>
-        <a class="btn btn-outline" href="https://play.google.com/store/apps/details?id=com.remotask.app">Sign in</a>
+<div class="top">
+  <i class="blob b1"></i><i class="blob b2"></i>
+  <div class="c">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="#top" aria-label="PROLIFIC TASK home"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#logo"/></svg>PROLIFIC TASK</a>
+      <div class="links">
+        <a href="#tasks">Tasks</a><a href="#how">How it works</a><a href="#payouts">Payouts</a><a href="#faq">FAQ</a>
+        <a class="btn gold" href="https://play.google.com/store/apps/details?id=com.remotask.app">Get the app</a>
       </div>
-      <ul class="hero-points">
-        <li><svg class="i"><use href="#check"/></svg>No subscription fees</li>
-        <li><svg class="i"><use href="#check"/></svg>Tasks from 2 minutes</li>
-        <li><svg class="i"><use href="#check"/></svg>Open worldwide</li>
-      </ul>
-    </div>
-    <div class="phone-wrap" aria-hidden="true">
-      <div class="phone"><div class="screen">
-        <div class="screen-top"><small>Available balance</small><b>$24.80</b></div>
-        <div class="screen-list">
-          <div class="row"><span class="ic"><svg class="i"><use href="#list"/></svg></span><div>Brand survey<span>+$1.20 · 3 min</span></div></div>
-          <div class="row"><span class="ic"><svg class="i"><use href="#phone"/></svg></span><div>Test a new app<span>+$2.50 · 5 min</span></div></div>
-          <div class="row"><span class="ic"><svg class="i"><use href="#image"/></svg></span><div>Tag images<span>+$0.80 · 2 min</span></div></div>
-          <div class="row"><span class="ic"><svg class="i"><use href="#star"/></svg></span><div>Review a product<span>+$1.50 · 4 min</span></div></div>
+    </nav>
+    <div class="hero" id="top">
+      <div>
+        <h1>Turn spare minutes into real payouts.</h1>
+        <p class="lead">Explore surveys, AI training activities and online task opportunities with PROLIFIC TASK. Free to join, open worldwide.</p>
+        <div class="acts">
+          <a class="btn gold" href="https://play.google.com/store/apps/details?id=com.remotask.app">Create free account <svg class="i"><use href="#arrow"/></svg></a>
+          <a class="btn ghost" href="https://play.google.com/store/apps/details?id=com.remotask.app">Sign in</a>
         </div>
-      </div></div>
+        <div class="proof"><span class="stars" aria-hidden="true">★★★★★</span><span><b>4.8</b> rating · Free on Google Play</span></div>
+      </div>
+      <div class="stage" aria-hidden="true">
+        <div class="float f1"><span class="ic"><svg class="i"><use href="#check"/></svg></span><div>Payout sent<small>$12.40 to M-Pesa</small></div></div>
+        <div class="phone"><div class="screen">
+          <div class="s-top"><small>Available balance</small><b>$24.80</b><span>+$3.70 today</span></div>
+          <div class="s-list">
+            <div class="row"><span class="ic"><svg class="i"><use href="#list"/></svg></span><div>Brand survey<em>3 min</em></div><u>+$1.20</u></div>
+            <div class="row"><span class="ic"><svg class="i"><use href="#phone"/></svg></span><div>Test a new app<em>5 min</em></div><u>+$2.50</u></div>
+            <div class="row"><span class="ic"><svg class="i"><use href="#image"/></svg></span><div>Tag images<em>2 min</em></div><u>+$0.80</u></div>
+            <div class="row"><span class="ic"><svg class="i"><use href="#star"/></svg></span><div>Review a product<em>4 min</em></div><u>+$1.50</u></div>
+          </div>
+        </div></div>
+        <div class="float f2"><span class="ic"><svg class="i"><use href="#wallet"/></svg></span><div>New tasks<small>6 available now</small></div></div>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="container">
+<div class="c">
   <div class="stats">
     <div><b>50K+</b><span>Active users</span></div>
     <div><b>$2.4M+</b><span>Total paid out</span></div>
@@ -189,100 +251,114 @@ footer .container{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
   </div>
 </div>
 
-<section id="features">
-  <div class="container">
-    <div class="head"><h2>Tasks you can finish between other things</h2><p>Pick the kind of work you enjoy and do it whenever you have a few minutes.</p></div>
-    <div class="grid4">
-      <div class="card"><div class="ic"><svg class="i"><use href="#list"/></svg></div><h3>Surveys</h3><p>Share opinions on brands, products and services.</p><span class="pay">$0.50 – $3.00</span></div>
-      <div class="card"><div class="ic"><svg class="i"><use href="#phone"/></svg></div><h3>App testing</h3><p>Try new apps and report your experience.</p><span class="pay">$1.00 – $5.00</span></div>
-      <div class="card"><div class="ic"><svg class="i"><use href="#image"/></svg></div><h3>Image labeling</h3><p>Help train AI with simple tagging tasks.</p><span class="pay">$0.20 – $1.50</span></div>
-      <div class="card"><div class="ic"><svg class="i"><use href="#star"/></svg></div><h3>Reviews</h3><p>Rate and review products you use daily.</p><span class="pay">$0.30 – $2.00</span></div>
+<div class="ribbon" aria-hidden="true"><div><span>Free to join</span><span>Tasks from 2 minutes</span><span>Open worldwide</span><span>Cash out from $5</span><span>Surveys · App testing · AI tasks</span><span>Paid via M-Pesa, PayPal and more</span><span>Free to join</span><span>Tasks from 2 minutes</span><span>Open worldwide</span><span>Cash out from $5</span><span>Surveys · App testing · AI tasks</span><span>Paid via M-Pesa, PayPal and more</span></div></div>
+
+<section>
+  <div class="c split">
+    <div class="copy">
+      <h2>Tasks that fit around your day</h2>
+      <p>Quick activities you can finish on your commute, on a break, or at home.</p>
+      <ul class="ticks">
+        <li><svg class="i"><use href="#check"/></svg>Simple tasks, many under 5 minutes</li>
+        <li><svg class="i"><use href="#check"/></svg>See the pay before you start</li>
+        <li><svg class="i"><use href="#check"/></svg>Work from anywhere, on your phone</li>
+      </ul>
+      <a class="btn pur" href="https://play.google.com/store/apps/details?id=com.remotask.app">Start earning <svg class="i"><use href="#arrow"/></svg></a>
+    </div>
+    <div class="panel" aria-hidden="true">
+      <div class="row"><span class="ic"><svg class="i"><use href="#list"/></svg></span><div>Brand survey<em>3 min · Surveys</em></div><u>+$1.20</u></div>
+      <div class="row"><span class="ic"><svg class="i"><use href="#phone"/></svg></span><div>Test a new app<em>5 min · App testing</em></div><u>+$2.50</u></div>
+      <div class="row"><span class="ic"><svg class="i"><use href="#image"/></svg></span><div>Tag images<em>2 min · AI training</em></div><u>+$0.80</u></div>
     </div>
   </div>
 </section>
 
-<section id="how" class="alt">
-  <div class="container">
-    <div class="head"><h2>How PROLIFIC TASK works</h2><p>Get set up in a few minutes.</p></div>
+<section class="alt" id="tasks">
+  <div class="c">
+    <div class="head"><h2>Choose the work you enjoy</h2><p>Four task types, each with a clear pay range.</p></div>
+    <div class="grid4">
+      <div class="card"><div class="tile"><svg class="i"><use href="#list"/></svg></div><h3>Surveys</h3><p>Share opinions on brands, products and services.</p><span class="pay">$0.50 – $3.00</span></div>
+      <div class="card"><div class="tile"><svg class="i"><use href="#phone"/></svg></div><h3>App testing</h3><p>Try new apps and report your experience.</p><span class="pay">$1.00 – $5.00</span></div>
+      <div class="card"><div class="tile"><svg class="i"><use href="#image"/></svg></div><h3>Image labeling</h3><p>Help train AI with simple tagging tasks.</p><span class="pay">$0.20 – $1.50</span></div>
+      <div class="card"><div class="tile"><svg class="i"><use href="#star"/></svg></div><h3>Reviews</h3><p>Rate and review products you use daily.</p><span class="pay">$0.30 – $2.00</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="c">
+    <div class="head"><h2>Start in three steps</h2><p>Set up your account in minutes.</p></div>
     <ol class="steps">
-      <li><h3>Create your account</h3><p>Sign up for free and get started quickly.</p></li>
-      <li><h3>Explore available tasks</h3><p>Discover surveys and simple tasks available to you.</p></li>
-      <li><h3>Complete tasks</h3><p>Submit your work and keep finding new opportunities.</p></li>
+      <li><h3>Create your account</h3><p>Sign up free and get started quickly.</p></li>
+      <li><h3>Explore available tasks</h3><p>Browse surveys and simple tasks available to you.</p></li>
+      <li><h3>Complete tasks</h3><p>Submit your work and keep finding new tasks.</p></li>
     </ol>
   </div>
 </section>
 
-<section>
-  <div class="container">
-    <div class="grid3">
-      <div class="card"><div class="ic"><svg class="i"><use href="#bolt"/></svg></div><h3>Quick tasks</h3><p>Simple activities designed to fit your schedule.</p></div>
-      <div class="card"><div class="ic"><svg class="i"><use href="#globe"/></svg></div><h3>Worldwide access</h3><p>Use PROLIFIC TASK from wherever you are.</p></div>
-      <div class="card"><div class="ic"><svg class="i"><use href="#shield"/></svg></div><h3>Your data stays yours</h3><p>We never sell your personal data. Survey responses are anonymized before sharing.</p></div>
+<section class="alt" id="payouts">
+  <div class="c split rev">
+    <div class="copy">
+      <h2>Cash out your way</h2>
+      <p>Withdraw from $5. Most payouts are processed within 24 hours, and available methods depend on your country.</p>
+      <div class="methods" style="justify-content:flex-start;margin-top:1.75rem">
+        <span><svg class="i"><use href="#wallet"/></svg>M-Pesa</span><span><svg class="i"><use href="#wallet"/></svg>PayPal</span><span><svg class="i"><use href="#wallet"/></svg>Bank</span><span><svg class="i"><use href="#wallet"/></svg>Crypto</span><span><svg class="i"><use href="#wallet"/></svg>Gift cards</span>
+      </div>
     </div>
-  </div>
-</section>
-
-<section id="payouts" class="alt">
-  <div class="container">
-    <div class="head"><h2>Get paid your way</h2><p>Cash out from $5. Available methods depend on your country.</p></div>
-    <div class="methods">
-      <span><svg class="i"><use href="#wallet"/></svg>M-Pesa</span>
-      <span><svg class="i"><use href="#wallet"/></svg>PayPal</span>
-      <span><svg class="i"><use href="#wallet"/></svg>Bank transfer</span>
-      <span><svg class="i"><use href="#wallet"/></svg>Crypto</span>
-      <span><svg class="i"><use href="#wallet"/></svg>Gift cards</span>
+    <div class="panel" aria-hidden="true">
+      <div class="bal"><small>Next payout</small><b>$24.80</b><div class="bar"><i></i></div><span>$5 minimum reached · ready to withdraw</span></div>
     </div>
   </div>
 </section>
 
 <section>
-  <div class="container">
-    <div class="head"><h2>What users say</h2></div>
+  <div class="c">
+    <div class="head"><h2>Loved by people everywhere</h2></div>
     <div class="grid3">
-      <div class="card quote"><div class="stars">★★★★★</div><p>"I cash out to M-Pesa every weekend. It's the easiest side income I've ever had — surveys take 2 minutes each."</p><div class="who"><i>A</i><div>Amara K.<small>Nairobi, Kenya</small></div></div></div>
-      <div class="card quote"><div class="stars">★★★★★</div><p>"Was skeptical at first but got my first PayPal payout in 24 hours. Now I do tasks during my commute."</p><div class="who"><i>R</i><div>Rohan M.<small>Mumbai, India</small></div></div></div>
-      <div class="card quote"><div class="stars">★★★★★</div><p>"Referral program is unreal — I made $48 last month just by inviting friends. App is super clean too."</p><div class="who"><i>L</i><div>Luisa F.<small>Manila, Philippines</small></div></div></div>
+      <div class="card quote"><span class="stars" aria-label="5 stars">★★★★★</span><p>"I cash out to M-Pesa every weekend. It's the easiest side income I've ever had — surveys take 2 minutes each."</p><div class="who"><i>A</i><div>Amara K.<small>Nairobi, Kenya</small></div></div></div>
+      <div class="card quote"><span class="stars" aria-label="5 stars">★★★★★</span><p>"Was skeptical at first but got my first PayPal payout in 24 hours. Now I do tasks during my commute."</p><div class="who"><i>R</i><div>Rohan M.<small>Mumbai, India</small></div></div></div>
+      <div class="card quote"><span class="stars" aria-label="5 stars">★★★★★</span><p>"Referral program is unreal — I made $48 last month just by inviting friends. App is super clean too."</p><div class="who"><i>L</i><div>Luisa F.<small>Manila, Philippines</small></div></div></div>
     </div>
   </div>
 </section>
 
-<div class="container">
-  <div class="referral">
-    <h2>Invite friends and earn together</h2>
-    <p>Get a $3 bonus for every active referral — a friend who completes their first task.</p>
-    <a class="btn" href="https://play.google.com/store/apps/details?id=com.remotask.app">Start inviting</a>
+<div class="c">
+  <div class="ref">
+    <div><h2>Invite friends, earn $3 each</h2><p>Get a $3 bonus for every active referral — a friend who completes their first task.</p></div>
+    <a class="btn pur" href="https://play.google.com/store/apps/details?id=com.remotask.app">Start inviting</a>
   </div>
 </div>
 
 <section id="faq">
-  <div class="container">
-    <div class="head"><h2>Frequently asked questions</h2></div>
+  <div class="c">
+    <div class="head"><h2>Questions, answered</h2></div>
     <div class="faq">
       <details><summary>Is PROLIFIC TASK free to join?</summary><p>Yes. Creating an account is free, with no subscription fees or upfront costs.</p></details>
       <details><summary>How fast are payouts?</summary><p>Most payouts are processed within 24 hours. M-Pesa and PayPal are usually instant once you reach the $5 minimum.</p></details>
-      <details><summary>What's the minimum to cash out?</summary><p>The minimum withdrawal is $5. Methods include M-Pesa, PayPal, bank transfer, crypto and gift cards, depending on your country.</p></details>
+      <details><summary>What's the minimum to cash out?</summary><p>The minimum withdrawal is $5, via M-Pesa, PayPal, bank transfer, crypto or gift cards depending on your country.</p></details>
       <details><summary>Which phones does it work on?</summary><p>PROLIFIC TASK runs on Android devices with a modern browser. An iOS version is in development.</p></details>
       <details><summary>Is my data safe?</summary><p>We never sell your personal data. Survey responses are anonymized before being shared with research partners.</p></details>
     </div>
   </div>
 </section>
 
-<section class="alt cta">
-  <div class="container">
-    <h2>Start earning today</h2>
-    <p style="color:var(--muted);margin:0">Join 50,000+ people using PROLIFIC TASK. Free to start, no commitment.</p>
-    <div class="stores">
-      <a class="store" href="https://play.google.com/store/apps/details?id=com.remotask.app"><svg class="i" style="width:26px;height:26px"><use href="#play"/></svg><span><small>Get it on</small><b>Google Play</b></span></a>
-      <a class="store off" href="#" aria-disabled="true"><svg class="i" style="width:26px;height:26px"><use href="#phone"/></svg><span><small>Coming soon</small><b>App Store</b></span></a>
-    </div>
+<div class="final">
+  <h2>Start earning today</h2>
+  <p>Join 50,000+ people using PROLIFIC TASK. Free to start, no commitment.</p>
+  <div class="stores">
+    <a class="store" href="https://play.google.com/store/apps/details?id=com.remotask.app"><svg class="i" style="width:28px;height:28px"><use href="#play"/></svg><span><small>GET IT ON</small><b>Google Play</b></span></a>
+    <a class="store off" href="#" aria-disabled="true"><svg class="i" style="width:28px;height:28px"><use href="#phone"/></svg><span><small>COMING SOON</small><b>App Store</b></span></a>
   </div>
-</section>
-</main>
+</div>
 
 <footer>
-  <div class="container">
-    <span>© 2026 PROLIFIC TASK. All rights reserved.</span>
-    <span>Simple, secure and easy to get started</span>
+  <div class="c">
+    <div class="fgrid">
+      <div><a class="brand" href="#top" style="color:var(--ink)"><svg viewBox="0 0 100 100" aria-hidden="true" style="background:none;padding:0"><use href="#logo"/></svg>PROLIFIC TASK</a><p style="max-width:18rem;margin:.6rem 0 0">Simple, secure and easy to get started.</p></div>
+      <div><b>Product</b><a href="#tasks">Tasks</a><a href="#how">How it works</a><a href="#payouts">Payouts</a></div>
+      <div><b>Support</b><a href="#faq">FAQ</a><a href="https://play.google.com/store/apps/details?id=com.remotask.app">Google Play</a></div>
+    </div>
+    <div class="copy-r"><span>© 2026 PROLIFIC TASK. All rights reserved.</span></div>
   </div>
 </footer>
 </body>
