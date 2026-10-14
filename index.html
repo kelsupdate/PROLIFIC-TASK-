@@ -10,41 +10,49 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#17122e;--muted:#625d78;--deep:#2a1066;--purple:#6d28d9;--violet:#8b5cf6;--gold:#f6bd2e;--lav:#f5f1ff;--line:#e8e2f6}
+:root{--ink:#17122e;--muted:#625d78;--deep:#2a1066;--purple:#6d28d9;--violet:#8b5cf6;--gold:#f6bd2e;--lav:#f5f1ff;--line:#e8e2f6;--pink:#ec4899;--cyan:#22d3ee;--orange:#fb923c}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:80px}
-body{margin:0;font-family:Manrope,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{margin:0;font-family:Manrope,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:linear-gradient(180deg,#fff 0%,#faf5ff 35%,#fff7f0 70%,#f6f0ff 100%);line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:8px}
 .c{max-width:1120px;margin:0 auto;padding:0 1.5rem}
 svg.i{width:1.2em;height:1.2em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;padding:.95rem 1.6rem;border-radius:999px;font-weight:700;font-size:.98rem;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;padding:1rem 1.8rem;border-radius:999px;font-weight:700;font-size:1rem;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s}
 .btn:hover{transform:translateY(-2px)}
-.gold{background:var(--gold);color:#2a1a00;box-shadow:0 10px 24px rgba(246,189,46,.35)}
-.ghost{border:1.5px solid rgba(255,255,255,.35);color:#fff}
-.ghost:hover{background:rgba(255,255,255,.1)}
-.pur{background:var(--purple);color:#fff;box-shadow:0 10px 24px rgba(109,40,217,.3)}
+.gold{background:linear-gradient(90deg,#fde047,#fb923c);color:#2a1a00;box-shadow:0 12px 30px rgba(246,189,46,.4)}
+.ghost{border:1.5px solid rgba(255,255,255,.4);color:#fff;background:rgba(255,255,255,.05);backdrop-filter:blur(6px)}
+.ghost:hover{background:rgba(255,255,255,.15)}
+.pur{background:linear-gradient(90deg,#6d28d9,#c026d3);color:#fff;box-shadow:0 12px 30px rgba(109,40,217,.35)}
 
-/* header + hero */
-.top{background:radial-gradient(1000px 520px at 85% 10%,#6d3bd6 0%,transparent 60%),linear-gradient(160deg,#2a1066,#1b0a45 70%);color:#fff;position:relative;overflow:hidden;padding-bottom:7rem}
-.top::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.12) 1.2px,transparent 1.3px);background-size:26px 26px;mask-image:linear-gradient(180deg,#000,transparent 70%);-webkit-mask-image:linear-gradient(180deg,#000,transparent 70%);pointer-events:none}
+/* header + dynamic marketing hero */
+.top{background:radial-gradient(900px 500px at 88% 5%,rgba(139,92,246,.9) 0%,transparent 60%),radial-gradient(700px 500px at 5% 95%,rgba(236,72,153,.55) 0%,transparent 60%),radial-gradient(500px 400px at 60% 100%,rgba(34,211,238,.28) 0%,transparent 70%),linear-gradient(160deg,#2a1066,#1b0a45 70%);color:#fff;position:relative;overflow:hidden;padding-bottom:7rem}
+.top>.blob{position:absolute;z-index:0;border-radius:50%;filter:blur(70px);pointer-events:none}
+.b1{width:340px;height:340px;background:var(--orange);opacity:.28;right:-80px;top:120px}
+.b2{width:280px;height:280px;background:var(--cyan);opacity:.2;left:38%;top:-120px}
 .top>*{position:relative;z-index:1}
 .nav{display:flex;align-items:center;justify-content:space-between;height:84px;padding-top:env(safe-area-inset-top,0)}
-.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-weight:800;font-size:1.2rem;letter-spacing:-.02em}
-.brand svg{width:38px;height:38px;background:#fff;border-radius:11px;padding:4px}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-weight:800;font-size:1.25rem;letter-spacing:-.02em}
+.brand svg{width:38px;height:38px;background:#fff;border-radius:11px;padding:4px;box-shadow:0 4px 12px rgba(0,0,0,.15)}
 .links{display:flex;align-items:center;gap:2rem}
-.links a{text-decoration:none;font-weight:600;font-size:.93rem;color:rgba(255,255,255,.8)}
+.links a{text-decoration:none;font-weight:600;font-size:.93rem;color:rgba(255,255,255,.8);transition:color .2s}
 .links a:hover{color:#fff}
 .links .btn{padding:.65rem 1.3rem;font-size:.9rem;color:#2a1a00}
-.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:2rem;align-items:center;padding-top:2.5rem}
-h1{font-size:clamp(2.5rem,5.6vw,4.2rem);line-height:1.04;letter-spacing:-.045em;margin:0 0 1.25rem;font-weight:800}
-.lead{font-size:1.15rem;color:rgba(255,255,255,.78);max-width:31rem;margin:0 0 2rem}
-.acts{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:1.75rem}
-.proof{display:flex;align-items:center;gap:.8rem;font-size:.9rem;color:rgba(255,255,255,.75)}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:2.5rem;align-items:center;padding-top:3rem}
+.badge-pill{display:inline-flex;align-items:center;gap:.5rem;padding:.35rem .9rem;border-radius:99px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);font-size:.8rem;font-weight:700;margin-bottom:1.25rem;backdrop-filter:blur(4px);color:#fde047}
+h1{font-size:clamp(2.6rem,5.8vw,4.4rem);line-height:1.05;letter-spacing:-.045em;margin:0 0 1.25rem;font-weight:800}
+.lead{font-size:1.18rem;color:rgba(255,255,255,.82);max-width:32rem;margin:0 0 2rem}
+.acts{display:flex;flex-wrap:wrap;gap:.9rem;margin-bottom:2rem}
+.proof{display:flex;align-items:center;gap:.9rem;font-size:.92rem;color:rgba(255,255,255,.78)}
 .proof b{color:#fff}
 .stars{color:var(--gold);letter-spacing:2px}
-.stage{position:relative;display:flex;justify-content:center;min-height:540px}
-.phone{width:262px;height:530px;border-radius:44px;background:#0d0820;padding:10px;box-shadow:0 40px 80px rgba(0,0,0,.45),0 0 0 2px rgba(255,255,255,.08);transform:rotate(4deg)}
+
+/* phone stage mockup */
+.stage{position:relative;display:flex;justify-content:center;min-height:560px}
+.stage::before{content:"";position:absolute;inset:8% 4%;border-radius:50%;background:radial-gradient(circle,rgba(246,189,46,.45),rgba(236,72,153,.3) 45%,transparent 70%);filter:blur(30px)}
+.stage>*{position:relative}
+.phone{width:272px;height:540px;border-radius:44px;background:#0d0820;padding:10px;box-shadow:0 40px 80px rgba(0,0,0,.5),0 0 0 2px rgba(255,255,255,.12);transform:rotate(3deg);transition:transform .3s}
+.phone:hover{transform:rotate(0deg) scale(1.02)}
 .screen{height:100%;border-radius:35px;background:#faf8ff;overflow:hidden;color:var(--ink)}
 .s-top{background:linear-gradient(160deg,#7c3aed,#4c1d95);color:#fff;padding:2.7rem 1.1rem 1.3rem}
 .s-top small{font-size:.7rem;opacity:.85}
@@ -56,42 +64,51 @@ h1{font-size:clamp(2.5rem,5.6vw,4.2rem);line-height:1.04;letter-spacing:-.045em;
 .row div{flex:1;font-size:.74rem;font-weight:800;line-height:1.3}
 .row em{display:block;font-style:normal;font-weight:600;color:var(--muted);font-size:.68rem}
 .row u{text-decoration:none;font-weight:800;font-size:.75rem;color:#0d8a4f}
-.float{position:absolute;background:#fff;color:var(--ink);border-radius:16px;padding:.7rem .95rem;display:flex;align-items:center;gap:.65rem;font-size:.78rem;font-weight:700;box-shadow:0 20px 40px rgba(0,0,0,.28);line-height:1.3}
+.float{position:absolute;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);color:var(--ink);border:1px solid rgba(255,255,255,.6);border-radius:16px;padding:.7rem .95rem;display:flex;align-items:center;gap:.65rem;font-size:.78rem;font-weight:700;box-shadow:0 20px 40px rgba(0,0,0,.28);line-height:1.3}
 .float small{display:block;font-weight:500;color:var(--muted);font-size:.7rem}
 .float .ic{background:#e7f8ef;color:#0d8a4f}
 .f1{top:80px;left:-10px}.f2{bottom:90px;right:-14px}
 .f2 .ic{background:#fff4d6;color:#b07d00}
 
-/* stats */
-.stats{position:relative;z-index:2;margin-top:-3.5rem;background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:0 24px 60px rgba(42,16,102,.14);display:grid;grid-template-columns:repeat(4,1fr);padding:1.75rem 1rem;text-align:center}
+/* stats section */
+.stats{position:relative;z-index:2;margin-top:-3.5rem;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(120deg,#a78bfa,#f472b6,#fcd34d) border-box;border:2px solid transparent;border-radius:24px;box-shadow:0 24px 60px rgba(42,16,102,.14);display:grid;grid-template-columns:repeat(4,1fr);padding:1.75rem 1rem;text-align:center}
 .stats div+div{border-left:1px solid var(--line)}
-.stats b{display:block;font-size:2rem;letter-spacing:-.04em;color:var(--purple);line-height:1.2}
+.stats b{display:block;font-size:2rem;letter-spacing:-.04em;background:linear-gradient(90deg,#6d28d9,#ec4899);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;line-height:1.2}
 .stats span{font-size:.85rem;color:var(--muted);font-weight:600}
 
+/* ticker ribbon */
+.ribbon{margin:4.5rem 0 0;background:linear-gradient(90deg,#6d28d9,#c026d3,#ec4899,#f59e0b);color:#fff;transform:rotate(-1.4deg);overflow:hidden;white-space:nowrap;box-shadow:0 16px 40px rgba(192,38,211,.28)}
+.ribbon div{display:inline-flex;gap:2.5rem;padding:1rem 0;animation:slide 28s linear infinite;font-weight:800;font-size:1.05rem}
+.ribbon span::after{content:"✦";margin-left:2.5rem;color:#fde68a}
+@keyframes slide{to{transform:translateX(-50%)}}
+
 /* sections */
-section{padding:5.5rem 0}
-.alt{background:var(--lav)}
+section{padding:5.5rem 0;position:relative;overflow:hidden}
+section>.c{position:relative;z-index:1}
+section::before{content:"";position:absolute;width:460px;height:460px;border-radius:50%;right:-160px;top:-100px;background:radial-gradient(circle,rgba(236,72,153,.16),transparent 70%);pointer-events:none}
+section::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;left:-160px;bottom:-120px;background:radial-gradient(circle,rgba(34,211,238,.16),transparent 70%);pointer-events:none}
+.alt{background:radial-gradient(700px 320px at 0% 0%,rgba(139,92,246,.26),transparent 70%),radial-gradient(700px 340px at 100% 100%,rgba(251,146,60,.22),transparent 70%),linear-gradient(135deg,#efe6ff,#fde8fb 55%,#ffefd6)}
 .head{text-align:center;max-width:38rem;margin:0 auto 3rem}
-h2{font-size:clamp(1.9rem,3.8vw,2.7rem);line-height:1.12;letter-spacing:-.04em;margin:0 0 .8rem;font-weight:800}
+h2{font-size:clamp(1.9rem,3.8vw,2.7rem);line-height:1.12;letter-spacing:-.04em;margin:0 0 .8rem;font-weight:800;background:linear-gradient(90deg,#2a1066,#6d28d9 55%,#db2777);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
 .head p,.copy p{color:var(--muted);margin:0;font-size:1.05rem}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
 .split.rev .copy{order:2}
 .ticks{list-style:none;padding:0;margin:1.5rem 0 2rem;display:grid;gap:.75rem}
 .ticks li{display:flex;gap:.7rem;font-weight:600}
-.ticks svg{color:#fff;background:var(--purple);border-radius:50%;padding:3px;width:1.4em;height:1.4em;margin-top:.1rem}
-.panel{background:linear-gradient(145deg,#efe8ff,#e1d6fb);border-radius:32px;padding:2.5rem 2rem;display:grid;gap:.8rem}
+.ticks svg{color:#fff;background:linear-gradient(145deg,#8b5cf6,#db2777);border-radius:50%;padding:3px;width:1.4em;height:1.4em;margin-top:.1rem}
+.panel{background:radial-gradient(300px 200px at 90% 0%,rgba(253,224,71,.6),transparent 70%),radial-gradient(300px 220px at 0% 100%,rgba(244,114,182,.45),transparent 70%),linear-gradient(145deg,#c4b5fd,#e9b8fb);border-radius:32px;padding:2.5rem 2rem;display:grid;gap:.8rem;box-shadow:0 30px 60px rgba(139,92,246,.28)}
 .panel .row{box-shadow:0 8px 20px rgba(42,16,102,.08);padding:.9rem 1rem}
 .panel .row div{font-size:.88rem}
 .panel .row em{font-size:.78rem}
-.bal{background:linear-gradient(160deg,#7c3aed,#2a1066);color:#fff;border-radius:22px;padding:1.5rem}
+.bal{background:radial-gradient(260px 180px at 100% 0%,rgba(236,72,153,.6),transparent 70%),linear-gradient(160deg,#7c3aed,#2a1066);color:#fff;border-radius:22px;padding:1.5rem}
 .bal small{opacity:.8;font-size:.8rem}
 .bal b{display:block;font-size:2.4rem;letter-spacing:-.04em;line-height:1.2}
 .bar{height:8px;border-radius:9px;background:rgba(255,255,255,.2);margin:1rem 0 .4rem;overflow:hidden}
-.bar i{display:block;width:82%;height:100%;background:var(--gold);border-radius:9px}
+.bar i{display:block;width:82%;height:100%;background:linear-gradient(90deg,#fde047,#fb923c);border-radius:9px}
 .bal span{font-size:.78rem;opacity:.85}
 .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
-.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:1.6rem;transition:transform .2s,box-shadow .2s}
-.card:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(42,16,102,.1)}
+.card,.steps li,details,.methods span{background:linear-gradient(160deg,#fff,#f8f3ff) padding-box,linear-gradient(135deg,#c4b5fd,#f9a8d4,#fcd34d) border-box;border:1.5px solid transparent;border-radius:22px;padding:1.6rem;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(42,16,102,.12)}
 .tile{width:52px;height:52px;border-radius:16px;display:flex;align-items:center;justify-content:center;color:#fff;margin-bottom:1.1rem;background:linear-gradient(145deg,#8b5cf6,#5b21b6)}
 .card:nth-child(2) .tile{background:linear-gradient(145deg,#fbbf24,#e09a00)}
 .card:nth-child(3) .tile{background:linear-gradient(145deg,#60a5fa,#3b6fd6)}
@@ -99,39 +116,42 @@ h2{font-size:clamp(1.9rem,3.8vw,2.7rem);line-height:1.12;letter-spacing:-.04em;m
 .tile svg{width:26px;height:26px}
 .card h3{margin:0 0 .4rem;font-size:1.1rem}
 .card p{margin:0;color:var(--muted);font-size:.92rem}
-.pay{display:inline-block;margin-top:1rem;padding:.3rem .8rem;border-radius:99px;background:var(--lav);color:var(--purple);font-weight:800;font-size:.8rem}
+.pay{display:inline-block;margin-top:1.0rem;padding:.3rem .8rem;border-radius:99px;background:linear-gradient(90deg,#ede4ff,#fde4f3);color:#7a1fb5;font-weight:800;font-size:.8rem}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;counter-reset:s;list-style:none;padding:0;margin:0}
-.steps li{counter-increment:s;background:#fff;border-radius:24px;padding:2rem;border:1px solid var(--line)}
-.steps li::before{content:counter(s);display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:var(--purple);color:#fff;font-weight:800;margin-bottom:1.2rem}
+.steps li{counter-increment:s;background:linear-gradient(160deg,#fff,#f8f3ff) padding-box,linear-gradient(135deg,#c4b5fd,#f9a8d4,#fcd34d) border-box;border-radius:24px;padding:2rem}
+.steps li::before{content:counter(s);display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:linear-gradient(145deg,#8b5cf6,#db2777);color:#fff;font-weight:800;margin-bottom:1.2rem;box-shadow:0 8px 20px rgba(139,92,246,.35)}
 .steps h3{margin:0 0 .4rem}.steps p{margin:0;color:var(--muted);font-size:.95rem}
 .methods{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem}
-.methods span{display:flex;align-items:center;gap:.55rem;padding:.85rem 1.3rem;background:#fff;border:1px solid var(--line);border-radius:16px;font-weight:700;box-shadow:0 6px 16px rgba(42,16,102,.05)}
+.methods span{display:flex;align-items:center;gap:.55rem;padding:.85rem 1.3rem;background:#fff;border-radius:16px;font-weight:700;box-shadow:0 6px 16px rgba(42,16,102,.05)}
 .methods svg{color:var(--purple)}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.grid3 .card.quote:nth-child(2){background:linear-gradient(160deg,#fff,#fff1f8) padding-box,linear-gradient(135deg,#f9a8d4,#fcd34d) border-box}
+.grid3 .card.quote:nth-child(3){background:linear-gradient(160deg,#fff,#effbff) padding-box,linear-gradient(135deg,#67e8f9,#c4b5fd) border-box}
 .quote{display:flex;flex-direction:column;gap:1rem}
 .quote p{margin:0;color:var(--ink);font-size:1rem;font-weight:500}
 .who{display:flex;align-items:center;gap:.75rem;font-weight:700;font-size:.92rem;margin-top:auto}
 .who i{width:42px;height:42px;border-radius:50%;background:linear-gradient(145deg,#8b5cf6,#5b21b6);color:#fff;display:flex;align-items:center;justify-content:center;font-style:normal}
 .who small{display:block;font-weight:500;color:var(--muted)}
-.ref{background:linear-gradient(120deg,var(--gold),#ffd76a);border-radius:32px;padding:3rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
-.ref h2{margin:0 0 .4rem;font-size:clamp(1.6rem,3vw,2.2rem)}
-.ref p{margin:0;color:#4a3600;font-weight:500;max-width:34rem}
+.ref{background:radial-gradient(400px 260px at 100% 0%,rgba(253,224,71,.55),transparent 70%),linear-gradient(120deg,#8b5cf6,#db2777 60%,#f59e0b);border-radius:32px;padding:3rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;color:#fff;box-shadow:0 30px 60px rgba(219,39,119,.28)}
+.ref h2{margin:0 0 .4rem;font-size:clamp(1.6rem,3vw,2.2rem);background:none;-webkit-text-fill-color:#fff;color:#fff}
+.ref p{margin:0;color:rgba(255,255,255,.92);font-weight:500;max-width:34rem}
+.ref .btn{background:#fff;color:#4c1d95;box-shadow:0 10px 24px rgba(0,0,0,.2)}
 .faq{max-width:740px;margin:0 auto}
-details{background:#fff;border:1px solid var(--line);border-radius:18px;padding:1.2rem 1.4rem;margin-bottom:.8rem}
+details{background:#fff;border-radius:18px;padding:1.2rem 1.4rem;margin-bottom:.8rem}
 summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:1rem}
 summary::-webkit-details-marker{display:none}
 summary::after{content:"+";color:var(--purple);font-size:1.4rem;line-height:1;transition:transform .2s}
 details[open] summary::after{transform:rotate(45deg)}
 details p{margin:.8rem 0 0;color:var(--muted);font-size:.95rem}
-.final{background:linear-gradient(160deg,#2a1066,#1b0a45);color:#fff;text-align:center;border-radius:36px;padding:4rem 1.5rem;margin:0 1.5rem}
-.final h2{color:#fff}
+.final{position:relative;overflow:hidden;background:radial-gradient(500px 320px at 100% 0%,rgba(236,72,153,.6),transparent 70%),radial-gradient(500px 320px at 0% 100%,rgba(34,211,238,.35),transparent 70%),radial-gradient(400px 260px at 50% 50%,rgba(139,92,246,.5),transparent 70%),linear-gradient(160deg,#2a1066,#1b0a45);color:#fff;text-align:center;border-radius:36px;padding:4rem 1.5rem;margin:0 1.5rem}
+.final h2{color:#fff;background:none;-webkit-text-fill-color:#fff}
 .final p{color:rgba(255,255,255,.78);margin:0 auto;max-width:30rem}
 .stores{display:flex;justify-content:center;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
 .store{display:flex;align-items:center;gap:.7rem;padding:.7rem 1.4rem;border-radius:14px;background:#fff;color:var(--ink);text-decoration:none;text-align:left}
 .store small{display:block;font-size:.65rem;color:var(--muted);line-height:1.1;font-weight:600}
 .store b{font-size:1rem;line-height:1.2}
 .store.off{opacity:.55;pointer-events:none}
-footer{padding:3rem 0 2rem;color:var(--muted);font-size:.9rem}
+footer{padding:3rem 0 2rem;color:var(--muted);font-size:.9rem;background:linear-gradient(180deg,transparent,#efe6ff);margin-top:4rem}
 .fgrid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2rem;padding-bottom:2rem;border-bottom:1px solid var(--line)}
 .fgrid a{display:block;text-decoration:none;margin-top:.4rem}.fgrid a:hover{color:var(--purple)}
 .fgrid b{color:var(--ink)}
@@ -148,48 +168,7 @@ footer{padding:3rem 0 2rem;color:var(--muted);font-size:.9rem}
   section{padding:4rem 0}
 }
 @media(max-width:480px){.grid4{grid-template-columns:1fr}.f1{left:0}.f2{right:0}.final{margin:0 .75rem}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-
-/* ===== marketing upgrade: rich gradients, no flat fills ===== */
-:root{--pink:#ec4899;--cyan:#22d3ee;--orange:#fb923c}
-body{background:linear-gradient(180deg,#fff 0%,#faf5ff 35%,#fff7f0 70%,#f6f0ff 100%)}
-.top{background:radial-gradient(900px 500px at 88% 5%,rgba(139,92,246,.9) 0%,transparent 60%),radial-gradient(700px 500px at 5% 95%,rgba(236,72,153,.55) 0%,transparent 60%),radial-gradient(500px 400px at 60% 100%,rgba(34,211,238,.28) 0%,transparent 70%),linear-gradient(160deg,#2a1066,#1b0a45 70%)}
-.top>.blob{position:absolute;z-index:0;border-radius:50%;filter:blur(70px);pointer-events:none}
-.b1{width:340px;height:340px;background:var(--orange);opacity:.28;right:-80px;top:120px}
-.b2{width:280px;height:280px;background:var(--cyan);opacity:.2;left:38%;top:-120px}
-.stage::before{content:"";position:absolute;inset:8% 4%;border-radius:50%;background:radial-gradient(circle,rgba(246,189,46,.45),rgba(236,72,153,.3) 45%,transparent 70%);filter:blur(30px)}
-.stage>*{position:relative}.stage>.float{position:absolute}
-.float{background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.6)}
-.gold{background:linear-gradient(90deg,#fde047,#fb923c)}
-.pur{background:linear-gradient(90deg,#6d28d9,#c026d3)}
-.stats{background:linear-gradient(#fff,#fff) padding-box,linear-gradient(120deg,#a78bfa,#f472b6,#fcd34d) border-box;border:2px solid transparent}
-.stats b,.head h2,.copy h2{background:linear-gradient(90deg,#2a1066,#6d28d9 55%,#db2777);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
-.stats b{background:linear-gradient(90deg,#6d28d9,#ec4899)}
-.ribbon{margin:4.5rem 0 0;background:linear-gradient(90deg,#6d28d9,#c026d3,#ec4899,#f59e0b);color:#fff;transform:rotate(-1.4deg);overflow:hidden;white-space:nowrap;box-shadow:0 16px 40px rgba(192,38,211,.28)}
-.ribbon div{display:inline-flex;gap:2.5rem;padding:1rem 0;animation:slide 28s linear infinite;font-weight:800;font-size:1.05rem}
-.ribbon span::after{content:"✦";margin-left:2.5rem;color:#fde68a}
-@keyframes slide{to{transform:translateX(-50%)}}
-section{position:relative;overflow:hidden}
-section>.c{position:relative;z-index:1}
-section::before{content:"";position:absolute;width:460px;height:460px;border-radius:50%;right:-160px;top:-100px;background:radial-gradient(circle,rgba(236,72,153,.16),transparent 70%);pointer-events:none}
-section::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;left:-160px;bottom:-120px;background:radial-gradient(circle,rgba(34,211,238,.16),transparent 70%);pointer-events:none}
-.alt{background:radial-gradient(700px 320px at 0% 0%,rgba(139,92,246,.26),transparent 70%),radial-gradient(700px 340px at 100% 100%,rgba(251,146,60,.22),transparent 70%),linear-gradient(135deg,#efe6ff,#fde8fb 55%,#ffefd6)}
-.card,.steps li,details,.methods span{background:linear-gradient(160deg,#fff,#f8f3ff) padding-box,linear-gradient(135deg,#c4b5fd,#f9a8d4,#fcd34d) border-box;border:1.5px solid transparent}
-.grid3 .card.quote:nth-child(2){background:linear-gradient(160deg,#fff,#fff1f8) padding-box,linear-gradient(135deg,#f9a8d4,#fcd34d) border-box}
-.grid3 .card.quote:nth-child(3){background:linear-gradient(160deg,#fff,#effbff) padding-box,linear-gradient(135deg,#67e8f9,#c4b5fd) border-box}
-.steps li::before{background:linear-gradient(145deg,#8b5cf6,#db2777);box-shadow:0 8px 20px rgba(139,92,246,.35)}
-.ticks svg{background:linear-gradient(145deg,#8b5cf6,#db2777)}
-.pay{background:linear-gradient(90deg,#ede4ff,#fde4f3);color:#7a1fb5}
-.panel{background:radial-gradient(300px 200px at 90% 0%,rgba(253,224,71,.6),transparent 70%),radial-gradient(300px 220px at 0% 100%,rgba(244,114,182,.45),transparent 70%),linear-gradient(145deg,#c4b5fd,#e9b8fb);box-shadow:0 30px 60px rgba(139,92,246,.28)}
-.bal{background:radial-gradient(260px 180px at 100% 0%,rgba(236,72,153,.6),transparent 70%),linear-gradient(160deg,#7c3aed,#2a1066)}
-.bar i{background:linear-gradient(90deg,#fde047,#fb923c)}
-.ref{background:radial-gradient(400px 260px at 100% 0%,rgba(253,224,71,.55),transparent 70%),linear-gradient(120deg,#8b5cf6,#db2777 60%,#f59e0b);color:#fff;box-shadow:0 30px 60px rgba(219,39,119,.28)}
-.ref h2{background:none;-webkit-text-fill-color:#fff;color:#fff}.ref p{color:rgba(255,255,255,.92)}
-.ref .btn{background:#fff;color:#4c1d95;box-shadow:0 10px 24px rgba(0,0,0,.2)}
-.final{position:relative;overflow:hidden;background:radial-gradient(500px 320px at 100% 0%,rgba(236,72,153,.6),transparent 70%),radial-gradient(500px 320px at 0% 100%,rgba(34,211,238,.35),transparent 70%),radial-gradient(400px 260px at 50% 50%,rgba(139,92,246,.5),transparent 70%),linear-gradient(160deg,#2a1066,#1b0a45)}
-.final h2{background:none;-webkit-text-fill-color:#fff;color:#fff}
-footer{background:linear-gradient(180deg,transparent,#efe6ff);margin-top:4rem}
-@media(prefers-reduced-motion:reduce){.ribbon div{animation:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}.ribbon div{animation:none}}
 </style>
 </head>
 <body>
@@ -217,13 +196,14 @@ footer{background:linear-gradient(180deg,transparent,#efe6ff);margin-top:4rem}
     </nav>
     <div class="hero" id="top">
       <div>
+        <div class="badge-pill">⚡ Instant Payouts &bull; Trusted Task Platform</div>
         <h1>Turn spare minutes into real payouts.</h1>
-        <p class="lead">Explore surveys, AI training activities and online task opportunities with PROLIFIC TASK. Free to join, open worldwide.</p>
+        <p class="lead">Explore high-paying surveys, AI training activities, and quick online tasks with PROLIFIC TASK. 100% free to join and open worldwide.</p>
         <div class="acts">
           <a class="btn gold" href="https://play.google.com/store/apps/details?id=com.remotask.app">Create free account <svg class="i"><use href="#arrow"/></svg></a>
           <a class="btn ghost" href="https://play.google.com/store/apps/details?id=com.remotask.app">Sign in</a>
         </div>
-        <div class="proof"><span class="stars" aria-hidden="true">★★★★★</span><span><b>4.8</b> rating · Free on Google Play</span></div>
+        <div class="proof"><span class="stars" aria-hidden="true">★★★★★</span><span><b>4.8/5</b> rating &bull; Free on Google Play</span></div>
       </div>
       <div class="stage" aria-hidden="true">
         <div class="float f1"><span class="ic"><svg class="i"><use href="#check"/></svg></span><div>Payout sent<small>$12.40 to M-Pesa</small></div></div>
@@ -257,25 +237,25 @@ footer{background:linear-gradient(180deg,transparent,#efe6ff);margin-top:4rem}
   <div class="c split">
     <div class="copy">
       <h2>Tasks that fit around your day</h2>
-      <p>Quick activities you can finish on your commute, on a break, or at home.</p>
+      <p>Quick activities you can finish on your commute, on a break, or right from your couch.</p>
       <ul class="ticks">
         <li><svg class="i"><use href="#check"/></svg>Simple tasks, many under 5 minutes</li>
-        <li><svg class="i"><use href="#check"/></svg>See the pay before you start</li>
-        <li><svg class="i"><use href="#check"/></svg>Work from anywhere, on your phone</li>
+        <li><svg class="i"><use href="#check"/></svg>See the exact pay before you start</li>
+        <li><svg class="i"><use href="#check"/></svg>Work from anywhere using your phone</li>
       </ul>
       <a class="btn pur" href="https://play.google.com/store/apps/details?id=com.remotask.app">Start earning <svg class="i"><use href="#arrow"/></svg></a>
     </div>
     <div class="panel" aria-hidden="true">
-      <div class="row"><span class="ic"><svg class="i"><use href="#list"/></svg></span><div>Brand survey<em>3 min · Surveys</em></div><u>+$1.20</u></div>
-      <div class="row"><span class="ic"><svg class="i"><use href="#phone"/></svg></span><div>Test a new app<em>5 min · App testing</em></div><u>+$2.50</u></div>
-      <div class="row"><span class="ic"><svg class="i"><use href="#image"/></svg></span><div>Tag images<em>2 min · AI training</em></div><u>+$0.80</u></div>
+      <div class="row"><span class="ic"><svg class="i"><use href="#list"/></svg></span><div>Brand survey<em>3 min &bull; Surveys</em></div><u>+$1.20</u></div>
+      <div class="row"><span class="ic"><svg class="i"><use href="#phone"/></svg></span><div>Test a new app<em>5 min &bull; App testing</em></div><u>+$2.50</u></div>
+      <div class="row"><span class="ic"><svg class="i"><use href="#image"/></svg></span><div>Tag images<em>2 min &bull; AI training</em></div><u>+$0.80</u></div>
     </div>
   </div>
 </section>
 
 <section class="alt" id="tasks">
   <div class="c">
-    <div class="head"><h2>Choose the work you enjoy</h2><p>Four task types, each with a clear pay range.</p></div>
+    <div class="head"><h2>Choose the work you enjoy</h2><p>Four distinct task types, each with transparent pay ranges.</p></div>
     <div class="grid4">
       <div class="card"><div class="tile"><svg class="i"><use href="#list"/></svg></div><h3>Surveys</h3><p>Share opinions on brands, products and services.</p><span class="pay">$0.50 – $3.00</span></div>
       <div class="card"><div class="tile"><svg class="i"><use href="#phone"/></svg></div><h3>App testing</h3><p>Try new apps and report your experience.</p><span class="pay">$1.00 – $5.00</span></div>
@@ -287,11 +267,11 @@ footer{background:linear-gradient(180deg,transparent,#efe6ff);margin-top:4rem}
 
 <section id="how">
   <div class="c">
-    <div class="head"><h2>Start in three steps</h2><p>Set up your account in minutes.</p></div>
+    <div class="head"><h2>Start in three easy steps</h2><p>Set up your account in minutes and grab your first task.</p></div>
     <ol class="steps">
-      <li><h3>Create your account</h3><p>Sign up free and get started quickly.</p></li>
-      <li><h3>Explore available tasks</h3><p>Browse surveys and simple tasks available to you.</p></li>
-      <li><h3>Complete tasks</h3><p>Submit your work and keep finding new tasks.</p></li>
+      <li><h3>Create your account</h3><p>Sign up free with zero subscription fees.</p></li>
+      <li><h3>Explore available tasks</h3><p>Browse live surveys and micro-tasks tailored to you.</p></li>
+      <li><h3>Complete & cash out</h3><p>Submit your work and get paid instantly to your wallet.</p></li>
     </ol>
   </div>
 </section>
@@ -300,20 +280,20 @@ footer{background:linear-gradient(180deg,transparent,#efe6ff);margin-top:4rem}
   <div class="c split rev">
     <div class="copy">
       <h2>Cash out your way</h2>
-      <p>Withdraw from $5. Most payouts are processed within 24 hours, and available methods depend on your country.</p>
+      <p>Withdraw starting from just $5. Most payouts are processed rapidly, with local and global payment methods supported.</p>
       <div class="methods" style="justify-content:flex-start;margin-top:1.75rem">
         <span><svg class="i"><use href="#wallet"/></svg>M-Pesa</span><span><svg class="i"><use href="#wallet"/></svg>PayPal</span><span><svg class="i"><use href="#wallet"/></svg>Bank</span><span><svg class="i"><use href="#wallet"/></svg>Crypto</span><span><svg class="i"><use href="#wallet"/></svg>Gift cards</span>
       </div>
     </div>
     <div class="panel" aria-hidden="true">
-      <div class="bal"><small>Next payout</small><b>$24.80</b><div class="bar"><i></i></div><span>$5 minimum reached · ready to withdraw</span></div>
+      <div class="bal"><small>Next payout</small><b>$24.80</b><div class="bar"><i></i></div><span>$5 minimum reached &bull; ready to withdraw</span></div>
     </div>
   </div>
 </section>
 
 <section>
   <div class="c">
-    <div class="head"><h2>Loved by people everywhere</h2></div>
+    <div class="head"><h2>Loved by earners everywhere</h2></div>
     <div class="grid3">
       <div class="card quote"><span class="stars" aria-label="5 stars">★★★★★</span><p>"I cash out to M-Pesa every weekend. It's the easiest side income I've ever had — surveys take 2 minutes each."</p><div class="who"><i>A</i><div>Amara K.<small>Nairobi, Kenya</small></div></div></div>
       <div class="card quote"><span class="stars" aria-label="5 stars">★★★★★</span><p>"Was skeptical at first but got my first PayPal payout in 24 hours. Now I do tasks during my commute."</p><div class="who"><i>R</i><div>Rohan M.<small>Mumbai, India</small></div></div></div>
@@ -324,7 +304,7 @@ footer{background:linear-gradient(180deg,transparent,#efe6ff);margin-top:4rem}
 
 <div class="c">
   <div class="ref">
-    <div><h2>Invite friends, earn $3 each</h2><p>Get a $3 bonus for every active referral — a friend who completes their first task.</p></div>
+    <div><h2>Invite friends, earn $3 each</h2><p>Get a $3 bonus for every active referral who completes their first task on the platform.</p></div>
     <a class="btn pur" href="https://play.google.com/store/apps/details?id=com.remotask.app">Start inviting</a>
   </div>
 </div>
@@ -333,18 +313,18 @@ footer{background:linear-gradient(180deg,transparent,#efe6ff);margin-top:4rem}
   <div class="c">
     <div class="head"><h2>Questions, answered</h2></div>
     <div class="faq">
-      <details><summary>Is PROLIFIC TASK free to join?</summary><p>Yes. Creating an account is free, with no subscription fees or upfront costs.</p></details>
-      <details><summary>How fast are payouts?</summary><p>Most payouts are processed within 24 hours. M-Pesa and PayPal are usually instant once you reach the $5 minimum.</p></details>
-      <details><summary>What's the minimum to cash out?</summary><p>The minimum withdrawal is $5, via M-Pesa, PayPal, bank transfer, crypto or gift cards depending on your country.</p></details>
-      <details><summary>Which phones does it work on?</summary><p>PROLIFIC TASK runs on Android devices with a modern browser. An iOS version is in development.</p></details>
-      <details><summary>Is my data safe?</summary><p>We never sell your personal data. Survey responses are anonymized before being shared with research partners.</p></details>
+      <details><summary>Is PROLIFIC TASK free to join?</summary><p>Yes! Creating an account is completely free, with no subscription fees or hidden costs.</p></details>
+      <details><summary>How fast are payouts?</summary><p>Most payouts are processed within 24 hours. M-Pesa and PayPal transfers are usually instant once you hit the $5 minimum.</p></details>
+      <details><summary>What's the minimum to cash out?</summary><p>The minimum withdrawal threshold is $5, via M-Pesa, PayPal, bank transfer, crypto, or gift cards depending on your region.</p></details>
+      <details><summary>Which phones does it work on?</summary><p>PROLIFIC TASK runs smoothly on all Android devices with a modern browser. An iOS version is currently in development.</p></details>
+      <details><summary>Is my data safe?</summary><p>We strictly protect your privacy and never sell your personal information. Survey responses are fully anonymized.</p></details>
     </div>
   </div>
 </section>
 
 <div class="final">
   <h2>Start earning today</h2>
-  <p>Join 50,000+ people using PROLIFIC TASK. Free to start, no commitment.</p>
+  <p>Join 50,000+ people using PROLIFIC TASK. Free to start, no long-term commitment.</p>
   <div class="stores">
     <a class="store" href="https://play.google.com/store/apps/details?id=com.remotask.app"><svg class="i" style="width:28px;height:28px"><use href="#play"/></svg><span><small>GET IT ON</small><b>Google Play</b></span></a>
     <a class="store off" href="#" aria-disabled="true"><svg class="i" style="width:28px;height:28px"><use href="#phone"/></svg><span><small>COMING SOON</small><b>App Store</b></span></a>
@@ -354,7 +334,7 @@ footer{background:linear-gradient(180deg,transparent,#efe6ff);margin-top:4rem}
 <footer>
   <div class="c">
     <div class="fgrid">
-      <div><a class="brand" href="#top" style="color:var(--ink)"><svg viewBox="0 0 100 100" aria-hidden="true" style="background:none;padding:0"><use href="#logo"/></svg>PROLIFIC TASK</a><p style="max-width:18rem;margin:.6rem 0 0">Simple, secure and easy to get started.</p></div>
+      <div><a class="brand" href="#top" style="color:var(--ink)"><svg viewBox="0 0 100 100" aria-hidden="true" style="background:none;padding:0"><use href="#logo"/></svg>PROLIFIC TASK</a><p style="max-width:18rem;margin:.6rem 0 0">Simple, secure, and rewarding micro-tasks on the go.</p></div>
       <div><b>Product</b><a href="#tasks">Tasks</a><a href="#how">How it works</a><a href="#payouts">Payouts</a></div>
       <div><b>Support</b><a href="#faq">FAQ</a><a href="https://play.google.com/store/apps/details?id=com.remotask.app">Google Play</a></div>
     </div>
