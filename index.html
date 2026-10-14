@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PROLIFIC TASK – Surveys, app testing and online tasks</title>
+<meta name="description" content="Explore surveys, AI training activities and online task opportunities with PROLIFIC TASK.">
+<meta name="theme-color" content="#5b21b6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#161a2b;--muted:#5f6679;--brand:#6d28d9;--brand-dark:#5b21b6;--tint:#f5f2fc;--gold:#f6bd2e;--line:#e6e3ef;--bg:#fff;--card:#fff}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#eceaf5;--muted:#a6a3b8;--brand:#a78bfa;--brand-dark:#8b5cf6;--tint:#1a1830;--line:#2c2a45;--bg:#12111f;--card:#1a1830}}
+:root[data-theme="dark"]{--ink:#eceaf5;--muted:#a6a3b8;--brand:#a78bfa;--brand-dark:#8b5cf6;--tint:#1a1830;--line:#2c2a45;--bg:#12111f;--card:#1a1830}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--brand);outline-offset:3px;border-radius:6px}
+.container{max-width:1080px;margin:0 auto;padding:0 1.25rem}
+svg.i{width:1.25em;height:1.25em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+
+/* header */
+header{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-weight:800;font-size:1.15rem;letter-spacing:-.02em}
+.brand svg{width:34px;height:34px}
+.nav-links{display:flex;align-items:center;gap:1.75rem}
+.nav-links a{text-decoration:none;font-size:.93rem;font-weight:500;color:var(--muted)}
+.nav-links a:hover{color:var(--brand)}
+.nav-links .btn{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.8rem 1.4rem;border-radius:10px;font-weight:600;font-size:.95rem;text-decoration:none;border:1px solid transparent;transition:background .2s}
+.btn-primary{background:var(--brand);color:#fff}
+.btn-primary:hover{background:var(--brand-dark)}
+.btn-outline{border-color:var(--line);background:var(--card);color:var(--ink)}
+.btn-outline:hover{border-color:var(--brand)}
+.btn-sm{padding:.55rem 1.1rem;font-size:.88rem}
+
+/* hero */
+.hero{background:linear-gradient(180deg,var(--tint),var(--bg));padding:4.5rem 0 3.5rem}
+.hero .container{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+h1{font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.1;letter-spacing:-.035em;margin:0 0 1rem;font-weight:800}
+.lead{font-size:1.1rem;color:var(--muted);max-width:30rem;margin:0 0 1.75rem}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:1.5rem}
+.hero-points{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;margin:0;padding:0;list-style:none;font-size:.9rem;color:var(--muted)}
+.hero-points li{display:flex;align-items:center;gap:.4rem}
+.hero-points svg{color:var(--brand)}
+.phone-wrap{display:flex;justify-content:center}
+.phone{width:250px;height:500px;border-radius:40px;background:#1c1533;padding:10px;box-shadow:0 30px 60px rgba(60,20,120,.25)}
+.screen{height:100%;border-radius:31px;background:#faf8ff;overflow:hidden;display:flex;flex-direction:column;color:#161a2b}
+.screen-top{background:linear-gradient(160deg,#6d28d9,#4c1d95);color:#fff;padding:2.6rem 1rem 1.1rem;text-align:center}
+.screen-top small{font-size:.7rem;opacity:.85}
+.screen-top b{display:block;font-size:1.7rem;letter-spacing:-.03em}
+.screen-list{padding:.8rem;display:flex;flex-direction:column;gap:.55rem}
+.row{display:flex;align-items:center;gap:.6rem;background:#fff;border:1px solid #e9e2f4;border-radius:12px;padding:.6rem .7rem}
+.row .ic{width:30px;height:30px;border-radius:8px;background:#f3edff;color:#6d28d9;display:flex;align-items:center;justify-content:center}
+.row .ic svg{width:16px;height:16px}
+.row div{flex:1;font-size:.72rem;font-weight:700}
+.row span{display:block;font-weight:600;color:#7a6a00;font-size:.68rem}
+
+/* sections */
+section{padding:4.5rem 0}
+.alt{background:var(--tint)}
+.head{text-align:center;max-width:36rem;margin:0 auto 2.75rem}
+h2{font-size:clamp(1.7rem,3.5vw,2.25rem);letter-spacing:-.025em;line-height:1.2;margin:0 0 .6rem;font-weight:800}
+.head p{margin:0;color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;text-align:center;padding:2rem 0;border-bottom:1px solid var(--line)}
+.stats b{display:block;font-size:1.8rem;letter-spacing:-.03em;color:var(--brand)}
+.stats span{font-size:.85rem;color:var(--muted)}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.5rem}
+.card .ic{width:44px;height:44px;border-radius:12px;background:var(--tint);color:var(--brand);display:flex;align-items:center;justify-content:center;margin-bottom:1rem}
+.alt .card .ic{background:var(--bg)}
+.card h3{margin:0 0 .35rem;font-size:1.05rem}
+.card p{margin:0;font-size:.92rem;color:var(--muted)}
+.pay{display:inline-block;margin-top:.8rem;font-size:.8rem;font-weight:700;color:var(--brand)}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin:0;padding:0;list-style:none}
+.steps li{counter-increment:s;text-align:center}
+.steps li::before{content:counter(s);display:flex;align-items:center;justify-content:center;width:48px;height:48px;margin:0 auto 1rem;border-radius:50%;background:var(--brand);color:#fff;font-weight:700}
+.steps h3{margin:0 0 .3rem}
+.steps p{margin:0;color:var(--muted);font-size:.93rem}
+.methods{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem}
+.methods span{display:flex;align-items:center;gap:.5rem;padding:.7rem 1.1rem;background:var(--card);border:1px solid var(--line);border-radius:10px;font-weight:600;font-size:.92rem}
+.methods svg{color:var(--brand)}
+.quote p{margin:0 0 1.1rem;font-size:.95rem}
+.who{display:flex;align-items:center;gap:.7rem;font-size:.88rem}
+.who i{width:38px;height:38px;border-radius:50%;background:var(--tint);color:var(--brand);display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:700}
+.who small{display:block;color:var(--muted)}
+.stars{color:var(--gold);letter-spacing:2px;margin-bottom:.5rem}
+.referral{background:var(--brand-dark);color:#fff;border-radius:18px;padding:2.5rem 1.5rem;text-align:center}
+.referral h2{color:#fff}
+.referral p{max-width:30rem;margin:0 auto 1.25rem;opacity:.9}
+.referral .btn{background:#fff;color:#4c1d95}
+.faq{max-width:700px;margin:0 auto}
+details{border-bottom:1px solid var(--line);padding:1.1rem 0}
+summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--brand);font-size:1.3rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin:.7rem 0 0;color:var(--muted);font-size:.94rem}
+.cta{text-align:center}
+.stores{display:flex;justify-content:center;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem}
+.store{display:flex;align-items:center;gap:.6rem;padding:.65rem 1.2rem;border-radius:10px;background:#161a2b;color:#fff;text-decoration:none;text-align:left}
+.store small{display:block;font-size:.65rem;opacity:.75;line-height:1.1}
+.store b{font-size:.95rem;line-height:1.2}
+.store.off{opacity:.55;pointer-events:none}
+footer{border-top:1px solid var(--line);padding:2.5rem 0;font-size:.88rem;color:var(--muted)}
+footer .container{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
+
+@media(max-width:860px){
+  .hero .container{grid-template-columns:1fr;text-align:center}
+  .lead{margin-left:auto;margin-right:auto}
+  .hero-actions,.hero-points{justify-content:center}
+  .grid4{grid-template-columns:repeat(2,1fr)}
+  .grid3,.steps{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .nav-links a:not(.btn){display:none}
+}
+@media(max-width:420px){.grid4{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logo" viewBox="0 0 100 100" fill="none"><rect x="15" y="12" width="70" height="76" rx="17" stroke="#6d28d9" stroke-width="7"/><rect x="25" y="29" width="17" height="17" rx="4" fill="#f6bd2e"/><path d="M29 37l5 5 6-9" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M52 37h21" stroke="#6d28d9" stroke-width="6" stroke-linecap="round"/><rect x="25" y="55" width="17" height="17" rx="4" fill="#f6bd2e"/><path d="M29 63l5 5 6-9" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M52 63h21" stroke="#6d28d9" stroke-width="6" stroke-linecap="round"/></symbol>
+  <symbol id="check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></symbol>
+  <symbol id="list" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></symbol>
+  <symbol id="phone" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></symbol>
+  <symbol id="image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></symbol>
+  <symbol id="star" viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.2 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z"/></symbol>
+  <symbol id="wallet" viewBox="0 0 24 24"><path d="M3 7a2 2 0 012-2h13v4"/><path d="M3 7v11a2 2 0 002 2h14a1 1 0 001-1V9a1 1 0 00-1-1H5a2 2 0 01-2-1z"/><circle cx="16" cy="14" r="1"/></symbol>
+  <symbol id="globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></symbol>
+  <symbol id="bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
+  <symbol id="shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="play" viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z" fill="currentColor"/></symbol>
+</svg>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#top" aria-label="PROLIFIC TASK home"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#logo"/></svg>PROLIFIC TASK</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#payouts">Payouts</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-primary btn-sm" href="https://play.google.com/store/apps/details?id=com.remotask.app">Get the app</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="container">
+    <div>
+      <h1>Simple online tasks, paid straight to your phone</h1>
+      <p class="lead">Explore surveys, AI training activities and online task opportunities with PROLIFIC TASK. Free to join and open worldwide.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.remotask.app">Create free account</a>
+        <a class="btn btn-outline" href="https://play.google.com/store/apps/details?id=com.remotask.app">Sign in</a>
+      </div>
+      <ul class="hero-points">
+        <li><svg class="i"><use href="#check"/></svg>No subscription fees</li>
+        <li><svg class="i"><use href="#check"/></svg>Tasks from 2 minutes</li>
+        <li><svg class="i"><use href="#check"/></svg>Open worldwide</li>
+      </ul>
+    </div>
+    <div class="phone-wrap" aria-hidden="true">
+      <div class="phone"><div class="screen">
+        <div class="screen-top"><small>Available balance</small><b>$24.80</b></div>
+        <div class="screen-list">
+          <div class="row"><span class="ic"><svg class="i"><use href="#list"/></svg></span><div>Brand survey<span>+$1.20 · 3 min</span></div></div>
+          <div class="row"><span class="ic"><svg class="i"><use href="#phone"/></svg></span><div>Test a new app<span>+$2.50 · 5 min</span></div></div>
+          <div class="row"><span class="ic"><svg class="i"><use href="#image"/></svg></span><div>Tag images<span>+$0.80 · 2 min</span></div></div>
+          <div class="row"><span class="ic"><svg class="i"><use href="#star"/></svg></span><div>Review a product<span>+$1.50 · 4 min</span></div></div>
+        </div>
+      </div></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="stats">
+    <div><b>50K+</b><span>Active users</span></div>
+    <div><b>$2.4M+</b><span>Total paid out</span></div>
+    <div><b>120+</b><span>Countries</span></div>
+    <div><b>4.8★</b><span>User rating</span></div>
+  </div>
+</div>
+
+<section id="features">
+  <div class="container">
+    <div class="head"><h2>Tasks you can finish between other things</h2><p>Pick the kind of work you enjoy and do it whenever you have a few minutes.</p></div>
+    <div class="grid4">
+      <div class="card"><div class="ic"><svg class="i"><use href="#list"/></svg></div><h3>Surveys</h3><p>Share opinions on brands, products and services.</p><span class="pay">$0.50 – $3.00</span></div>
+      <div class="card"><div class="ic"><svg class="i"><use href="#phone"/></svg></div><h3>App testing</h3><p>Try new apps and report your experience.</p><span class="pay">$1.00 – $5.00</span></div>
+      <div class="card"><div class="ic"><svg class="i"><use href="#image"/></svg></div><h3>Image labeling</h3><p>Help train AI with simple tagging tasks.</p><span class="pay">$0.20 – $1.50</span></div>
+      <div class="card"><div class="ic"><svg class="i"><use href="#star"/></svg></div><h3>Reviews</h3><p>Rate and review products you use daily.</p><span class="pay">$0.30 – $2.00</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="alt">
+  <div class="container">
+    <div class="head"><h2>How PROLIFIC TASK works</h2><p>Get set up in a few minutes.</p></div>
+    <ol class="steps">
+      <li><h3>Create your account</h3><p>Sign up for free and get started quickly.</p></li>
+      <li><h3>Explore available tasks</h3><p>Discover surveys and simple tasks available to you.</p></li>
+      <li><h3>Complete tasks</h3><p>Submit your work and keep finding new opportunities.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="grid3">
+      <div class="card"><div class="ic"><svg class="i"><use href="#bolt"/></svg></div><h3>Quick tasks</h3><p>Simple activities designed to fit your schedule.</p></div>
+      <div class="card"><div class="ic"><svg class="i"><use href="#globe"/></svg></div><h3>Worldwide access</h3><p>Use PROLIFIC TASK from wherever you are.</p></div>
+      <div class="card"><div class="ic"><svg class="i"><use href="#shield"/></svg></div><h3>Your data stays yours</h3><p>We never sell your personal data. Survey responses are anonymized before sharing.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="payouts" class="alt">
+  <div class="container">
+    <div class="head"><h2>Get paid your way</h2><p>Cash out from $5. Available methods depend on your country.</p></div>
+    <div class="methods">
+      <span><svg class="i"><use href="#wallet"/></svg>M-Pesa</span>
+      <span><svg class="i"><use href="#wallet"/></svg>PayPal</span>
+      <span><svg class="i"><use href="#wallet"/></svg>Bank transfer</span>
+      <span><svg class="i"><use href="#wallet"/></svg>Crypto</span>
+      <span><svg class="i"><use href="#wallet"/></svg>Gift cards</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="head"><h2>What users say</h2></div>
+    <div class="grid3">
+      <div class="card quote"><div class="stars">★★★★★</div><p>"I cash out to M-Pesa every weekend. It's the easiest side income I've ever had — surveys take 2 minutes each."</p><div class="who"><i>A</i><div>Amara K.<small>Nairobi, Kenya</small></div></div></div>
+      <div class="card quote"><div class="stars">★★★★★</div><p>"Was skeptical at first but got my first PayPal payout in 24 hours. Now I do tasks during my commute."</p><div class="who"><i>R</i><div>Rohan M.<small>Mumbai, India</small></div></div></div>
+      <div class="card quote"><div class="stars">★★★★★</div><p>"Referral program is unreal — I made $48 last month just by inviting friends. App is super clean too."</p><div class="who"><i>L</i><div>Luisa F.<small>Manila, Philippines</small></div></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="referral">
+    <h2>Invite friends and earn together</h2>
+    <p>Get a $3 bonus for every active referral — a friend who completes their first task.</p>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.remotask.app">Start inviting</a>
+  </div>
+</div>
+
+<section id="faq">
+  <div class="container">
+    <div class="head"><h2>Frequently asked questions</h2></div>
+    <div class="faq">
+      <details><summary>Is PROLIFIC TASK free to join?</summary><p>Yes. Creating an account is free, with no subscription fees or upfront costs.</p></details>
+      <details><summary>How fast are payouts?</summary><p>Most payouts are processed within 24 hours. M-Pesa and PayPal are usually instant once you reach the $5 minimum.</p></details>
+      <details><summary>What's the minimum to cash out?</summary><p>The minimum withdrawal is $5. Methods include M-Pesa, PayPal, bank transfer, crypto and gift cards, depending on your country.</p></details>
+      <details><summary>Which phones does it work on?</summary><p>PROLIFIC TASK runs on Android devices with a modern browser. An iOS version is in development.</p></details>
+      <details><summary>Is my data safe?</summary><p>We never sell your personal data. Survey responses are anonymized before being shared with research partners.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="alt cta">
+  <div class="container">
+    <h2>Start earning today</h2>
+    <p style="color:var(--muted);margin:0">Join 50,000+ people using PROLIFIC TASK. Free to start, no commitment.</p>
+    <div class="stores">
+      <a class="store" href="https://play.google.com/store/apps/details?id=com.remotask.app"><svg class="i" style="width:26px;height:26px"><use href="#play"/></svg><span><small>Get it on</small><b>Google Play</b></span></a>
+      <a class="store off" href="#" aria-disabled="true"><svg class="i" style="width:26px;height:26px"><use href="#phone"/></svg><span><small>Coming soon</small><b>App Store</b></span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <span>© 2026 PROLIFIC TASK. All rights reserved.</span>
+    <span>Simple, secure and easy to get started</span>
+  </div>
+</footer>
+</body>
+</html>
